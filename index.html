@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PriceRadar – Найди товар дешевле</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#05060a; color:#f5f5f5; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#090b12; position:sticky; top:0; }
+    .logo { font-weight:bold; font-size:20px; }
+    nav a { margin:0 10px; text-decoration:none; color:#ccc; font-size:14px; }
+    .btn-main { padding:10px 20px; border:none; border-radius:6px; background:#f5b301; color:#000; font-weight:bold; cursor:pointer; }
+    .hero { display:flex; flex-direction:column; align-items:center; text-align:center; padding:60px 20px; max-width:800px; margin:0 auto; }
+    .hero h1 { font-size:32px; margin-bottom:20px; }
+    .hero p { font-size:16px; margin-bottom:30px; color:#d0d0d0; }
+    .input-row { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; }
+    .input-row input { padding:12px 14px; min-width:260px; border-radius:6px; border:none; }
+    section { padding:40px 20px; max-width:900px; margin:0 auto; }
+    h2 { margin-bottom:20px; font-size:24px; }
+    .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+    .card { background:#10121b; padding:20px; border-radius:10px; }
+    .save-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:20px; }
+    footer { padding:20px 40px; background:#090b12; font-size:12px; color:#777; }
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo">PriceRadar</div>
+  <nav>
+    <a href="#how">Как это работает</a>
+    <a href="#who">Для кого</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <button class="btn-main">Войти</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Найди тот же товар дешевле за 10 секунд</h1>
+    <p>Вставь ссылку на товар — мы найдём такие же предложения на других сайтах и покажем, где выгоднее.</p>
+    <div class="input-row">
+      <input type="text" placeholder="Вставьте ссылку на товар">
+      <button class="btn-main">Найти дешевле</button>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>Как это работает</h2>
+    <div class="steps">
+      <div class="card">
+        <strong>1. Вставляешь ссылку</strong>
+        <p>С любого магазина: Amazon, AliExpress и другие.</p>
+      </div>
+      <div class="card">
+        <strong>2. Мы ищем аналоги</strong>
+        <p>На десятках площадок по названию и характеристикам.</p>
+      </div>
+      <div class="card">
+        <strong>3. Ты выбираешь выгодную цену</strong>
+        <p>Сравниваешь и покупаешь там, где дешевле.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Примеры экономии</h2>
+    <div class="save-grid">
+      <div class="card">
+        <strong>Наушники X</strong>
+        <p>Было: 250 ₪<br>Нашли: 179 ₪<br><b>Экономия: 71 ₪</b></p>
+      </div>
+      <div class="card">
+        <strong>Кроссовки Y</strong>
+        <p>Было: 420 ₪<br>Нашли: 299 ₪<br><b>Экономия: 121 ₪</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="who">
+    <h2>Для кого этот сервис</h2>
+    <div class="card">
+      <p>Для тех, кто не хочет переплачивать за товар и устал от фейковых скидок и дропшипперов.</p>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Частые вопросы</h2>
+    <div class="card">
+      <strong>Вы продаёте товары?</strong>
+      <p>Нет, мы только показываем, где дешевле. Ты сам выбираешь магазин.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 PriceRadar. Все права защищены.
+</footer>
+</body>
+</html>
