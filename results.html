@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>PriceRadar – Результаты поиска</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { margin:0; font-family:Arial, sans-serif; background:#05060a; color:#f5f5f5; }
+    header { display:flex; justify-content:space-between; align-items:center; padding:20px 40px; background:#090b12; }
+    .logo { font-weight:bold; font-size:20px; }
+    nav a { margin:0 10px; text-decoration:none; color:#ccc; font-size:14px; }
+    .btn-main { padding:10px 20px; border:none; border-radius:6px; background:#f5b301; color:#000; font-weight:bold; cursor:pointer; }
+    
+    .container { max-width:900px; margin:40px auto; padding:20px; }
+    h1 { font-size:28px; margin-bottom:20px; }
+    
+    .result-card {
+      background:#10121b;
+      padding:20px;
+      border-radius:10px;
+      margin-bottom:20px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .result-card img {
+      width:100px;
+      height:auto;
+      border-radius:6px;
+    }
+
+    .info {
+      flex:1;
+      margin-left:20px;
+      min-width:220px;
+    }
+
+    .price {
+      font-size:18px;
+      font-weight:bold;
+      color:#f5b301;
+    }
+
+    .btn-buy {
+      margin-top:10px;
+      padding:8px 16px;
+      border:none;
+      border-radius:6px;
+      background:#f5b301;
+      color:#000;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    footer { padding:20px 40px; background:#090b12; font-size:12px; color:#777; margin-top:40px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">PriceRadar</div>
+  <nav>
+    <a href="index.html">Главная</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Результаты поиска</h1>
+
+  <!-- Пример карточки результата -->
+  <div class="result-card">
+    <img src="https://via.placeholder.com/100" alt="Товар">
+    <div class="info">
+      <div><strong>Наушники X</strong></div>
+      <div class="price">Цена: 179 ₪</div>
+      <div>Сайт: AliExpress</div>
+    </div>
+    <button class="btn-buy">Перейти</button>
+  </div>
+
+  <div class="result-card">
+    <img src="https://via.placeholder.com/100" alt="Товар">
+    <div class="info">
+      <div><strong>Наушники X (вариант)</strong></div>
+      <div class="price">Цена: 190 ₪</div>
+      <div>Сайт: Amazon</div>
+    </div>
+    <button class="btn-buy">Перейти</button>
+  </div>
+
+  <div class="result-card">
+    <img src="https://via.placeholder.com/100" alt="Товар">
+    <div class="info">
+      <div><strong>Наушники X (альтернативный)</strong></div>
+      <div class="price">Цена: 189 ₪</div>
+      <div>Сайт: eBay</div>
+    </div>
+    <button class="btn-buy">Перейти</button>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 PriceRadar. Все права защищены.
+</footer>
+
+</body>
+</html>
