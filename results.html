@@ -106,6 +106,31 @@
 <footer>
   © 2025 PriceRadar. Все права защищены.
 </footer>
+<script>
+  const saved = localStorage.getItem('searchResults');
+  if (saved) {
+    const data = JSON.parse(saved);
+
+    const container = document.querySelector('.container');
+
+    data.results.forEach(item => {
+      const card = document.createElement('div');
+      card.className = "result-card";
+      card.innerHTML = `
+        <img src="https://via.placeholder.com/100">
+        <div class="info">
+          <div><strong>${item.title}</strong></div>
+          <div class="price">Цена: ${item.price} ${item.currency}</div>
+          <div>Сайт: ${item.site}</div>
+        </div>
+        <a href="${item.url}" target="_blank">
+          <button class="btn-buy">Перейти</button>
+        </a>
+      `;
+      container.appendChild(card);
+    });
+  }
+</script>
 
 </body>
 </html>
