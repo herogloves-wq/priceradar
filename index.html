@@ -39,9 +39,10 @@
     <h1>Найди тот же товар дешевле за 10 секунд</h1>
     <p>Вставь ссылку на товар — мы найдём такие же предложения на других сайтах и покажем, где выгоднее.</p>
     <div class="input-row">
-      <input type="text" placeholder="Вставьте ссылку на товар">
-      <a href="results.html">
-  <button class="btn-main">Найти дешевле</button>
+  <input id="productInput" type="text" placeholder="Вставьте ссылку на товар или название">
+  <button class="btn-main" id="searchBtn" type="button">Найти дешевле</button>
+</div>
+
 </a>
     </div>
   </section>
@@ -97,5 +98,41 @@
 <footer>
   © 2025 PriceRadar. Все права защищены.
 </footer>
+<script>
+  const btn = document.getElementById('searchBtn');
+  const input = document.getElementById('productInput');
+
+  btn.addEventListener('click', async () => {
+    const query = input.value.trim();
+    if (!query) {
+      alert('Введите ссылку или название товара');
+      return;
+    }
+
+    try {
+      const res = await fetch(`http://localhost:3000/api/search?q=${encodeURIComponent(query)}`);
+      const data = await res.json();
+
+      console.log('Результаты от сервера:', data);
+
+      // Пока просто покажем первый результат
+      if (data.results && data.results.length > 0) {
+        const best = data.results[0];
+        alert(
+          `Лучшее найденное предложение:\n\n` +
+          `${best.title}\n` +
+          `Цена: ${best.price} ${best.currency}\n` +
+          `Сайт: ${best.site}`
+        );
+      } else {
+        alert('Ничего не найдено');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Ошибка при обращении к серверу');
+    }
+  });
+</script>
+
 </body>
 </html>
